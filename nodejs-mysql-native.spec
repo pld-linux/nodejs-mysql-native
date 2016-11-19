@@ -1,19 +1,20 @@
 %define		pkg	mysql-native
-Summary:	MySql protocol client for Node.js
+Summary:	MySQL protocol client for Node.js
 Name:		nodejs-%{pkg}
-Version:	0.4.4
+Version:	0.4.7
 Release:	1
 License:	MIT
 Group:		Development/Libraries
-URL:		http://github.com/sidorares/nodejs-mysql-native
 Source0:	http://registry.npmjs.org/mysql-native/-/%{pkg}-%{version}.tgz
-# Source0-md5:	abfc7ebcf268c61c20d12c093ddc880b
+# Source0-md5:	e08a768366196f6a3917ed29038d3f66
+URL:		http://github.com/sidorares/nodejs-mysql-native
 BuildRequires:	rpmbuild(macros) >= 1.634
-Requires:	nodejs
+Requires:	nodejs >= 0.6.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+MySQL protocol client for Node.js.
 
 %prep
 %setup -qc
