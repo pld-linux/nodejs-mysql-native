@@ -14,7 +14,11 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-MySQL protocol client for Node.js.
+MySQL client module for node.js, written in JavaScript. No other mysql
+runtime required.
+
+Deprecated. If you are using it, please consider migrating to
+node-mysql2
 
 %prep
 %setup -qc
